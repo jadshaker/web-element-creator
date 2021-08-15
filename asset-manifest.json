@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/web-element-creator/static/css/main.c9372dd0.chunk.css",
-    "main.js": "/web-element-creator/static/js/main.64ebea2a.chunk.js",
-    "main.js.map": "/web-element-creator/static/js/main.64ebea2a.chunk.js.map",
+    "main.js": "/web-element-creator/static/js/main.a0acde70.chunk.js",
+    "main.js.map": "/web-element-creator/static/js/main.a0acde70.chunk.js.map",
     "runtime-main.js": "/web-element-creator/static/js/runtime-main.af72811d.js",
     "runtime-main.js.map": "/web-element-creator/static/js/runtime-main.af72811d.js.map",
     "static/js/2.2381f3b8.chunk.js": "/web-element-creator/static/js/2.2381f3b8.chunk.js",
@@ -11,13 +11,13 @@
     "static/css/main.c9372dd0.chunk.css.map": "/web-element-creator/static/css/main.c9372dd0.chunk.css.map",
     "static/js/2.2381f3b8.chunk.js.LICENSE.txt": "/web-element-creator/static/js/2.2381f3b8.chunk.js.LICENSE.txt",
     "static/media/CheckMark.94abc5e3.svg": "/web-element-creator/static/media/CheckMark.94abc5e3.svg",
-    "static/media/Checkbox.85b2f3e1.zip": "/web-element-creator/static/media/Checkbox.85b2f3e1.zip",
-    "static/media/Switch.9c576830.zip": "/web-element-creator/static/media/Switch.9c576830.zip"
+    "static/media/Checkbox.ec4de38d.zip": "/web-element-creator/static/media/Checkbox.ec4de38d.zip",
+    "static/media/Switch.bea36a20.zip": "/web-element-creator/static/media/Switch.bea36a20.zip"
   },
   "entrypoints": [
     "static/js/runtime-main.af72811d.js",
     "static/js/2.2381f3b8.chunk.js",
     "static/css/main.c9372dd0.chunk.css",
-    "static/js/main.64ebea2a.chunk.js"
+    "static/js/main.a0acde70.chunk.js"
   ]
 }
