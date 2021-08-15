@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import CheckMark from './CheckMark.svg';
 
-let size, onColor, offColor, borderColor, borderSize, hoverColor;
+let size, onColor, offColor, borderSize, borderRadius, borderColor, hoverColor;
 
 const Div = styled.div`
   ${props => {
@@ -9,16 +9,18 @@ const Div = styled.div`
     onColor = props.on_color || '#5ce640';
     offColor = props.offColor || '#ffffff';
     hoverColor = props.hoverColor || '#cccccc';
-    borderColor = props.borderColor || '#000000';
     borderSize = props.borderSize || '0';
-    console.log(onColor);
+    borderRadius = props.borderRadius || '0';
+    borderColor = props.borderColor || '#000000';
   }}
+
   & label {
     position: relative;
     display: inline-block;
     width: ${() => (size - 1) * (13 / 3) + 13}px;
     height: ${() => (size - 1) * (13 / 3) + 13}px;
     border: ${() => borderSize}px solid ${() => borderColor};
+    border-radius: ${() => borderRadius}%;
   }
 
   & input {
@@ -27,6 +29,7 @@ const Div = styled.div`
 
   & span:hover {
     background: ${() => hoverColor};
+    border-radius: ${() => borderRadius}%;
   }
 
   & span {
@@ -38,6 +41,7 @@ const Div = styled.div`
     left: 0;
     background: ${() => offColor};
     transition: 0.5s;
+    border-radius: ${() => borderRadius}%;
   }
 
   & label input:checked + span {

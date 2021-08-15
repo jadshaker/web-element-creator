@@ -29,6 +29,57 @@ const Div = styled.div`
     background: #ffffff;
   }
 
+  & .slider {
+    position: relative;
+    height: 32px;
+  }
+
+  & .slider span {
+    position: absolute;
+    top: 18px;
+    left: 90%;
+    padding: 2px;
+    width: 10%;
+    box-sizing: border-box;
+    background: #ffffff;
+    text-align: center;
+    z-index: 1;
+    border-radius: 15px;
+  }
+
+  & .container input[type='range'] {
+    width: 90%;
+    height: 2px;
+    background: #ffffff;
+    -webkit-appearance: none;
+    outline: none;
+    border-radius: 2px;
+    border: none;
+    padding: 0;
+    left: 0;
+    top: 27px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  @media (max-width: 550px) {
+    & .container span {
+      width: 20%;
+      left: 80%;
+    }
+    & .container input[type='range'] {
+      width: 80%;
+    }
+  }
+
+  & .container input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #6442d3;
+  }
+
   & .container input[type='color'] {
     border: 0;
     padding: 0.2rem;

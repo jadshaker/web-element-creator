@@ -5,8 +5,9 @@ const Checkbox = props => (
     size={props.size}
     on_color={props.on_color}
     offColor={props.offColor}
-    borderColor={props.borderColor}
     borderSize={props.borderSize}
+    borderRadius={props.borderRadius}
+    borderColor={props.borderColor}
     hoverColor={props.hoverColor}
   >
     <label>

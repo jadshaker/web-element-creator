@@ -1,14 +1,24 @@
-const Input = e => (
-  <label>
-    {e.title}
-    <input
-      type={e.type}
-      min={e.min}
-      max={e.max}
-      value={e.value}
-      onChange={e.onChange}
-    />
-  </label>
-);
+const Input = props => {
+  const classes = 'container' + (props.type === 'range' ? ' slider' : '');
+  return (
+    <div className={classes}>
+      <label>
+        {props.title}
+        {props.type === 'range' && (
+          <span>
+            {props.value} {props.unit}
+          </span>
+        )}
+        <input
+          type={props.type}
+          min={props.min}
+          max={props.max}
+          value={props.value}
+          onChange={props.onChange}
+        />
+      </label>
+    </div>
+  );
+};
 
 export default Input;

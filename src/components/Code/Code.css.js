@@ -13,7 +13,7 @@ const Div = styled.div`
 
   & a {
     text-decoration: none;
-    color: #000000;
+    color: #4826b9;
   }
 `;
 

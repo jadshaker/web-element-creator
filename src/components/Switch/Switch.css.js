@@ -16,7 +16,6 @@ const Div = styled.div`
   & label {
     position: relative;
     display: inline-block;
-
     width: ${() => (size - 1) * 10 + 30}px;
     height: ${() => (size - 1) * (17 / 3) + 17}px;
   }
@@ -33,16 +32,14 @@ const Div = styled.div`
     bottom: 0;
     left: 0;
     transition: 0.5s;
-
     background: ${() => offColor};
-    ${() => rounded && 'border-radius: 34px;'}
+    ${() => rounded && 'border-radius: 100px;'}
   }
 
   & label span:before {
     position: absolute;
     content: '';
     transition: 0.5s;
-
     width: ${() => (size - 1) * (13 / 3) + 13}px;
     height: ${() => (size - 1) * (13 / 3) + 13}px;
     left: ${() => (size - 1) * (2 / 3) + 2}px;

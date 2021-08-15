@@ -14,8 +14,9 @@ const DATA = {
   onColor: '#2094f3',
   offColor: '#cccccc',
   innerColor: '#ffffff',
-  borderColor: '#000000',
   borderSize: '1',
+  borderRadius: '0',
+  borderColor: '#000000',
   hoverColor: '#cccccc',
   codeType: 'React',
 };
@@ -26,8 +27,9 @@ const ItemForm = () => {
   const [onColor, setOnColor] = useState(DATA.onColor);
   const [offColor, setOffColor] = useState(DATA.offColor);
   const [innerColor, setInnerColor] = useState(DATA.innerColor);
-  const [borderColor, setBorderColor] = useState(DATA.borderColor);
   const [borderSize, setBorderSize] = useState(DATA.borderSize);
+  const [borderRadius, setBorderRadius] = useState(DATA.borderRadius);
+  const [borderColor, setBorderColor] = useState(DATA.borderColor);
   const [hoverColor, setHoverColor] = useState(DATA.hoverColor);
   const [codeType, setCodeType] = useState(DATA.codeType);
 
@@ -37,8 +39,9 @@ const ItemForm = () => {
     DATA.onColor = onColor;
     DATA.offColor = offColor;
     DATA.innerColor = innerColor;
-    DATA.borderColor = borderColor;
     DATA.borderSize = borderSize;
+    DATA.borderRadius = borderRadius;
+    DATA.borderColor = borderColor;
     DATA.hoverColor = hoverColor;
     DATA.codeType = codeType;
   });
@@ -58,11 +61,14 @@ const ItemForm = () => {
   const changeInnerColorHandler = e => {
     setInnerColor(e.target.value);
   };
-  const changeBorderColorHandler = e => {
-    setBorderColor(e.target.value);
-  };
   const changeBorderSizeHandler = e => {
     setBorderSize(e.target.value);
+  };
+  const changeBorderRadiusHandler = e => {
+    setBorderRadius(e.target.value);
+  };
+  const changeBorderColorHandler = e => {
+    setBorderColor(e.target.value);
   };
   const changeHoverColorHandler = e => {
     setHoverColor(e.target.value);
@@ -80,84 +86,82 @@ const ItemForm = () => {
           </div>
 
           {(item === 'Switch' || item === 'Checkbox') && (
-            <div className="container">
-              <Input
-                title="Size"
-                type="number"
-                min="1"
-                max="20"
-                value={Math.max(1, Math.min(size, 20))}
-                onChange={changeSizeHandler}
-              />
-            </div>
+            <Input
+              title="Size"
+              type="range"
+              min="1"
+              max="20"
+              value={Math.max(1, Math.min(size, 20))}
+              onChange={changeSizeHandler}
+            />
+          )}
+
+          {item === 'Checkbox' && (
+            <Input
+              title="Border Size"
+              type="range"
+              min="0"
+              max="20"
+              value={Math.max(0, Math.min(borderSize, 20))}
+              onChange={changeBorderSizeHandler}
+            />
+          )}
+
+          {item === 'Checkbox' && (
+            <Input
+              title="Border Radius"
+              type="range"
+              min="0"
+              max="50"
+              unit="%"
+              value={Math.max(0, Math.min(borderRadius, 50))}
+              onChange={changeBorderRadiusHandler}
+            />
           )}
 
           {(item === 'Switch' || item === 'Checkbox') && (
-            <div className="container">
-              <Input
-                title="On Color"
-                type="color"
-                value={onColor}
-                onChange={changeOnColorHandler}
-              />
-            </div>
+            <Input
+              title="On Color"
+              type="color"
+              value={onColor}
+              onChange={changeOnColorHandler}
+            />
           )}
 
           {(item === 'Switch' || item === 'Checkbox') && (
-            <div className="container">
-              <Input
-                title="Off Color"
-                type="color"
-                value={offColor}
-                onChange={changeOffColorHandler}
-              />
-            </div>
+            <Input
+              title="Off Color"
+              type="color"
+              value={offColor}
+              onChange={changeOffColorHandler}
+            />
+          )}
+
+          {item === 'Checkbox' && (
+            <Input
+              title="Border Color"
+              type="color"
+              value={borderColor}
+              onChange={changeBorderColorHandler}
+            />
           )}
 
           {item === 'Switch' && (
-            <div className="container">
-              <Input
-                title="Inner Color"
-                type="color"
-                value={innerColor}
-                onChange={changeInnerColorHandler}
-              />
-            </div>
+            <Input
+              title="Inner Color"
+              type="color"
+              value={innerColor}
+              onChange={changeInnerColorHandler}
+            />
           )}
 
           {item === 'Checkbox' && (
-            <div className="container">
-              <Input
-                title="Border Color"
-                type="color"
-                value={borderColor}
-                onChange={changeBorderColorHandler}
-              />
-            </div>
-          )}
-
-          {item === 'Checkbox' && (
-            <div className="container">
-              <Input
-                title="Border Size"
-                type="number"
-                min="0"
-                max="20"
-                value={Math.max(0, Math.min(borderSize, 20))}
-                onChange={changeBorderSizeHandler}
-              />
-            </div>
-          )}
-
-          {item === 'Checkbox' && (
-            <div className="container">
-              <Input
-                title="Hover Color"
-                type="color"
-                value={hoverColor}
-                onChange={changeHoverColorHandler}
-              />
-            </div>
+            <Input
+              title="Hover Color"
+              type="color"
+              value={hoverColor}
+              onChange={changeHoverColorHandler}
+            />
           )}
         </Div>
       </Card>
@@ -171,13 +175,15 @@ const ItemForm = () => {
             innerColor={innerColor}
           />
         )}
+
         {item === 'Checkbox' && (
           <Checkbox
             size={Math.max(1, Math.min(size, 20))}
             on_color={onColor}
             offColor={offColor}
-            borderColor={borderColor}
             borderSize={Math.max(0, Math.min(borderSize, 20))}
+            borderRadius={Math.max(0, Math.min(borderRadius, 50))}
+            borderColor={borderColor}
             hoverColor={hoverColor}
           />
         )}
@@ -192,8 +198,9 @@ const ItemForm = () => {
           onColor={onColor}
           offColor={offColor}
           innerColor={innerColor}
-          borderColor={borderColor}
           borderSize={borderSize}
+          borderRadius={borderRadius}
+          borderColor={borderColor}
           hoverColor={hoverColor}
           codeType={codeType}
         />
