@@ -11,8 +11,6 @@ const SelectItem = props => {
         onChange={props.onChange}
       >
         {options}
-        {/* <option value="Switch">Switch</option>
-      <option value="Checkbox">Checkbox</option> */}
       </select>
     </label>
   );
