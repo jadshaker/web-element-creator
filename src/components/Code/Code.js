@@ -4,54 +4,54 @@ import Checkbox from './zipFiles/Checkbox.zip';
 import CheckMark from './../Checkbox/CheckMark.svg';
 
 const Code = props => {
-    const item = props.item;
-    const size = Math.max(1, Math.min(props.size, 20));
-    const onColor = props.onColor;
-    const offColor = props.offColor;
-    const innerColor = props.innerColor;
-    const borderColor = props.borderColor;
-    const borderSize = Math.max(0, Math.min(props.borderSize, 20));
-    const hoverColor = props.hoverColor;
-    const codeType = props.codeType;
+  const item = props.item;
+  const size = Math.max(1, Math.min(props.size, 20));
+  const onColor = props.onColor;
+  const offColor = props.offColor;
+  const innerColor = props.innerColor;
+  const borderColor = props.borderColor;
+  const borderSize = Math.max(0, Math.min(props.borderSize, 20));
+  const hoverColor = props.hoverColor;
+  const codeType = props.codeType;
 
-    if (codeType === 'React')
-        return (
-            <Div>
-                <h3>Steps to use React script</h3>
-                <ol type="1">
-                    <li>
-                        Install styled-components library in your app
-                        <br /> (npm install styled-components)
-                    </li>
-                    <li>
-                        Install the{' '}
-                        <i>
-                            <b>
-                                <a
-                                    href={item === 'Switch' ? Switch : Checkbox}
-                                    download={`${item}.zip`}
-                                >
-                                    {item}
-                                </a>
-                            </b>
-                        </i>{' '}
-                        files and put them in your app
-                    </li>
-                    <li>
-                        Import <b>{item}</b> in your file and copy the code!
-                    </li>
-                </ol>
-                <Pre>
-                    {item === 'Switch' &&
-                        `<Switch
+  if (codeType === 'React')
+    return (
+      <Div>
+        <h3>Steps to use React script</h3>
+        <ol type="1">
+          <li>
+            Install styled-components library in your app
+            <br /> (npm install styled-components)
+          </li>
+          <li>
+            Install the{' '}
+            <i>
+              <b>
+                <a
+                  href={item === 'Switch' ? Switch : Checkbox}
+                  download={`${item}.zip`}
+                >
+                  {item}
+                </a>
+              </b>
+            </i>{' '}
+            files and put them in your app
+          </li>
+          <li>
+            Import <b>{item}</b> in your file and copy the code!
+          </li>
+        </ol>
+        <Pre>
+          {item === 'Switch' &&
+            `<Switch
     size={${size}}
     on_color='${onColor}'
     offColor='${offColor}'
     innerColor='${innerColor}'
 />`}
 
-                    {item === 'Checkbox' &&
-                        `<Checkbox
+          {item === 'Checkbox' &&
+            `<Checkbox
     size={${size}}
     on_color='${onColor}'
     offColor='${offColor}'
@@ -59,15 +59,15 @@ const Code = props => {
     borderSize={${borderSize}}
     hoverColor='${hoverColor}'
 />`}
-                </Pre>
-            </Div>
-        );
+        </Pre>
+      </Div>
+    );
 
-    return (
-        <Div>
-            <Pre>
-                {item === 'Switch' &&
-                    `<style>
+  return (
+    <Div>
+      <Pre>
+        {item === 'Switch' &&
+          `<style>
     #switch-container label {
         position: relative;
         display: inline-block;
@@ -120,8 +120,8 @@ const Code = props => {
     </label>
 </div>`}
 
-                {item === 'Checkbox' &&
-                    `<style>
+        {item === 'Checkbox' &&
+          `<style>
     #checkbox-container label {
         position: relative;
         display: inline-block;
@@ -163,17 +163,17 @@ const Code = props => {
     </label>
 </div>
 `}
-            </Pre>
-            Put this svg file in the same path as the code <br />
-            <i>
-                <b>
-                    <a href={CheckMark} download="CheckMark.svg">
-                        CheckMark
-                    </a>
-                </b>
-            </i>
-        </Div>
-    );
+      </Pre>
+      Put this svg file in the same path as the code <br />
+      <i>
+        <b>
+          <a href={CheckMark} download="CheckMark.svg">
+            CheckMark
+          </a>
+        </b>
+      </i>
+    </Div>
+  );
 };
 
 export default Code;
