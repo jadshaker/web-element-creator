@@ -1,12 +1,5 @@
-import './App.css';
+import ItemForm from './components/ItemForm/ItemForm';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My React App</h1>
-      <h2>Author: Jad Shaker</h2>
-    </div>
-  );
-}
+const App = () => <ItemForm />;
 
 export default App;
