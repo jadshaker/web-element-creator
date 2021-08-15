@@ -8,6 +8,8 @@ import Checkbox from '../Checkbox/Checkbox';
 import Buttons from '../Buttons/Buttons';
 import Code from '../Code/Code';
 
+const ITEMS = ['Switch', 'Checkbox'];
+
 const DATA = {
   item: 'Switch',
   size: '1',
@@ -82,7 +84,11 @@ const ItemForm = () => {
       <Card>
         <Div>
           <div className="container">
-            <SelectItem value={item} onChange={changeItemHandler} />
+            <SelectItem
+              value={item}
+              options={ITEMS}
+              onChange={changeItemHandler}
+            />
           </div>
 
           {(item === 'Switch' || item === 'Checkbox') && (
