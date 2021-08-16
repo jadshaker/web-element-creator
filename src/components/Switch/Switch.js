@@ -6,7 +6,7 @@ const Switch = props => {
       size={props.size}
       on_color={props.on_color}
       offColor={props.offColor}
-      innerColor={props.innerColor}
+      buttonColor={props.buttonColor}
       rounded={props.rounded}
       on_img={props.onImg}
       offImg={props.offImg}

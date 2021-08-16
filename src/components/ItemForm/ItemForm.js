@@ -8,10 +8,13 @@ import Checkbox from '../Checkbox/Checkbox';
 import Buttons from '../Buttons/Buttons';
 import Code from '../Code/Code';
 
-const ITEMS = ['Switch', 'Checkbox'];
+const SWITCH = 'Switch';
+const CHECKBOX = 'Checkbox';
+
+const ITEMS = [SWITCH, CHECKBOX];
 
 const DATA = {
-  item: 'Switch',
+  item: SWITCH,
   size: '1',
   onColor: '#2094f3',
   offColor: '#cccccc',
@@ -89,7 +92,7 @@ const ItemForm = () => {
             onChange={changeItemHandler}
           />
 
-          {(item === 'Switch' || item === 'Checkbox') && (
+          {(item === SWITCH || item === CHECKBOX) && (
             <Input
               title="Size"
               type="range"
@@ -100,7 +103,7 @@ const ItemForm = () => {
             />
           )}
 
-          {item === 'Checkbox' && (
+          {item === CHECKBOX && (
             <Input
               title="Border Size"
               type="range"
@@ -111,7 +114,7 @@ const ItemForm = () => {
             />
           )}
 
-          {item === 'Checkbox' && (
+          {item === CHECKBOX && (
             <Input
               title="Border Radius"
               type="range"
@@ -123,7 +126,7 @@ const ItemForm = () => {
             />
           )}
 
-          {(item === 'Switch' || item === 'Checkbox') && (
+          {(item === SWITCH || item === CHECKBOX) && (
             <Input
               title="On Color"
               type="color"
@@ -132,7 +135,7 @@ const ItemForm = () => {
             />
           )}
 
-          {(item === 'Switch' || item === 'Checkbox') && (
+          {(item === SWITCH || item === CHECKBOX) && (
             <Input
               title="Off Color"
               type="color"
@@ -141,7 +144,7 @@ const ItemForm = () => {
             />
           )}
 
-          {item === 'Checkbox' && (
+          {item === CHECKBOX && (
             <Input
               title="Border Color"
               type="color"
@@ -150,7 +153,7 @@ const ItemForm = () => {
             />
           )}
 
-          {item === 'Switch' && (
+          {item === SWITCH && (
             <Input
               title="Inner Color"
               type="color"
@@ -159,7 +162,7 @@ const ItemForm = () => {
             />
           )}
 
-          {item === 'Checkbox' && (
+          {item === CHECKBOX && (
             <Input
               title="Hover Color"
               type="color"
@@ -171,7 +174,7 @@ const ItemForm = () => {
       </Card>
 
       <Card>
-        {item === 'Switch' && (
+        {item === SWITCH && (
           <Switch
             size={Math.max(1, Math.min(size, 20))}
             on_color={onColor}
@@ -180,7 +183,7 @@ const ItemForm = () => {
           />
         )}
 
-        {item === 'Checkbox' && (
+        {item === CHECKBOX && (
           <Checkbox
             size={Math.max(1, Math.min(size, 20))}
             on_color={onColor}

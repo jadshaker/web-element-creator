@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-let size, offColor, onColor, innerColor, rounded, onImg, offImg;
+let size, offColor, onColor, buttonColor, rounded, onImg, offImg;
 
 const Div = styled.div`
   ${props => {
     size = props.size || 1;
     offColor = props.offColor || '#cccccc';
     onColor = props.on_color || '#2094f3';
-    innerColor = props.innerColor || '#ffffff';
+    buttonColor = props.buttonColor || '#ffffff';
     rounded = props.rounded !== false;
     onImg = props.on_img;
     offImg = props.offImg;
@@ -44,13 +44,13 @@ const Div = styled.div`
     height: ${() => (size - 1) * (13 / 3) + 13}px;
     left: ${() => (size - 1) * (2 / 3) + 2}px;
     bottom: ${() => (size - 1) * (2 / 3) + 2}px;
-    background: ${() => innerColor} no-repeat center center;
+    background: ${() => buttonColor} no-repeat center center;
     background-image: url(${() => offImg});
     ${() => rounded && 'border-radius: 50%;'}
   }
 
   & label input:checked + span:before {
-    background: ${() => innerColor} no-repeat center center;
+    background: ${() => buttonColor} no-repeat center center;
     background-image: url(${() => onImg});
     transform: translateX(${() => (size - 1) * (13 / 3) + 13}px);
   }

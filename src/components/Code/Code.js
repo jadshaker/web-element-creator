@@ -8,7 +8,7 @@ const Code = props => {
   const size = Math.max(1, Math.min(props.size, 20));
   const onColor = props.onColor;
   const offColor = props.offColor;
-  const innerColor = props.innerColor;
+  const buttonColor = props.buttonColor;
   const borderSize = Math.max(0, Math.min(props.borderSize, 20));
   const borderRadius = Math.max(0, Math.min(props.borderRadius, 50));
   const borderColor = props.borderColor;
@@ -48,7 +48,7 @@ const Code = props => {
   size={${size}}
   on_color='${onColor}'
   offColor='${offColor}'
-  innerColor='${innerColor}'
+  buttonColor='${buttonColor}'
 />`}
 
           {item === 'Checkbox' &&
@@ -101,12 +101,12 @@ const Code = props => {
     height: ${Math.round((size - 1) * (13 / 3) + 13)}px;
     left: ${Math.round((size - 1) * (2 / 3) + 2)}px;
     bottom: ${Math.round((size - 1) * (2 / 3) + 2)}px;
-    background: ${innerColor};
+    background: ${buttonColor};
     border-radius: 50%;
   }
 
   #switch-container label input:checked + span:before {
-    background: ${innerColor};
+    background: ${buttonColor};
     transform: translateX(${Math.floor((size - 1) * (13 / 3) + 13)}px);
   }
 
