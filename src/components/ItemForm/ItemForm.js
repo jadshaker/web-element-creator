@@ -16,7 +16,7 @@ const DATA = {
   onColor: '#2094f3',
   offColor: '#cccccc',
   innerColor: '#ffffff',
-  borderSize: '1',
+  borderSize: '0',
   borderRadius: '0',
   borderColor: '#000000',
   hoverColor: '#cccccc',
@@ -83,13 +83,11 @@ const ItemForm = () => {
     <div>
       <Card>
         <Div>
-          <div className="container">
-            <SelectItem
-              value={item}
-              options={ITEMS}
-              onChange={changeItemHandler}
-            />
-          </div>
+          <SelectItem
+            value={item}
+            options={ITEMS}
+            onChange={changeItemHandler}
+          />
 
           {(item === 'Switch' || item === 'Checkbox') && (
             <Input

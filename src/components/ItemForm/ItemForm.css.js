@@ -58,6 +58,7 @@ const Div = styled.div`
     padding: 0;
     left: 0;
     top: 27px;
+    cursor: pointer;
     position: absolute;
     z-index: 1;
   }
